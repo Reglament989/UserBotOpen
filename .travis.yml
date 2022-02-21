@@ -1,0 +1,20 @@
+language: python
+os: linux
+dist: xenial
+python: 3.8.6
+script:
+  - python -m pytest -v --disable-warnings --cov=./ --cov-report=xml test.py
+after_success:
+  - codecov -t 1c5060a9-97da-48b8-8437-f3748426a54c
+notifications:
+  webhooks: 
+    urls: 
+      - https://fathomless-fjord-24024.herokuapp.com/notify?secret=gbhZxnsw9hsLMx
+    on_start: always
+deploy:
+  provider: heroku
+  api_key:
+    secure: "qqTFh7PcwftcbJ2YOsRqKDMsCXmIJQoOQx1Sm5Voxwwnhay0jVrzL83F2ht9Q1JoB9JGLiptDCPycSRtgApO1y48EfxunP3uifDg8jssrApDuS1zBzUdnUHBQVfVW5+H+Sr2hRXVzJKVtELtPLuvmxKsNDJXj7ynVJ79vtql/fxIpKOg90tGSi5a7UAYCpXUIgrzvhPbnVj01rqybRAqnG3YuNwtBXbFY/LteJP8V/GfzcgQT8pHgWKTM88jZm8gamjovwC9gQwPkwaEPpr6ORBM/l4/AtUevq7EgxkofOj8lg2QCGDJhyY/fAH5r9iZwph6gPc9Y2WgT+pMfSGxIpLIl+ttEVmqTXjyZh7ELDoFpistr1WvSbzaPP9x/H8XeHJG9EKVUI8+zssUf+5Xv1nYu0Xe/aI6867e30UC4MHnOsHMd7GztiNscLu8wUYRJa9YiKOvnq2j5z0n9m9UW5IfrtFe0WHkLW8CWVZNTLQwkb82VBTMiwltAscFlZZYAu7hHwT68ucny5ut9owcEEGgRp2TNMEatIO+L+Aqrv0swMB8WNaTagRIP975UWTSRiCpfr36dnQQUScbr58RQiwqS3IsFaz1AX/m2dx/RfE7awNsFbvuF6pJhUtQGtbeCbBeovoL/ExVoa+UYFyFIxfp8Bl6RSpo5IVhu5dhjUY="
+  app: userbot989
+  strategy: git
+  cleanup: true

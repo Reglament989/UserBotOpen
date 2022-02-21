@@ -1,0 +1,17 @@
+telethon~=1.16.4
+codecov
+pydantic
+ujson
+pytest-cov
+pycryptodome
+cryptg
+aiohttp~=3.6.2
+pyfiglet~=0.8.post1
+pillow~=7.2.0
+myqr~=2.3.1
+lxml~=4.5.2
+ffmpeg
+dnspython
+googletrans
+aiohttp_jinja2
+requests~=2.24.0

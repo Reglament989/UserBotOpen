@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    border: 2px solid oldlace;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 15rem;
+    padding: 5rem;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+#code, #password {
+    border: 2px solid oldlace;
+    border-radius: 5px;
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 1.5rem;
+}
+
+#err {
+    color: red;
+}
+
+button {
+    padding-right: 0.5rem;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    padding-left: 0.5rem;
+}

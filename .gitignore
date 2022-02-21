@@ -1,0 +1,7 @@
+__pycache__
+.pytest_cache
+coverage.xml
+.coverage
+.vscode
+ffmpeg.tar.xz
+*.session
